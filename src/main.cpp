@@ -16,4 +16,13 @@ void setup(){
     pinMode(led, OUTPUT);
     Serial.begin(9600);
 }
-void loop()
+void loop(){
+int state=digitalRead(touchPin);
+if(state==HIGH){
+    digitalWrite(led, HIGH);
+    Serial.println("Touch");
+}else{
+    digitalRead(led, LOW);
+    Serial.println("Not Touch");
+}
+}
