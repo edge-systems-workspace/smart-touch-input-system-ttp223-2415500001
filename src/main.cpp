@@ -11,3 +11,8 @@
  */
 int led=13;
 int touchPin=3;
+void setup(){
+    pinMode(touchPin, INPUT);
+    pinMode(led, OUTPUT);
+    Serial.begin(9600);
+}
